@@ -4,11 +4,13 @@ import { LayoutComponent } from './layout.component';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { FeedsService } from 'src/app/services/feeds.service';
 import { FeedElementComponent } from 'src/app/components/feed-element/feed-element.component';
+import { ModalAthleteInformationComponent } from 'src/app/components/modal-athlete-information/modal-athlete-information.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
-    FeedElementComponent
+    FeedElementComponent,
+    ModalAthleteInformationComponent
   ],
   imports: [
     CommonModule,

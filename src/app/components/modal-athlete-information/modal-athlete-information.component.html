@@ -1,0 +1,40 @@
+<div>
+    <div class="modal-header">
+        <h4 class="modal-title">Athlete details</h4>
+        <button type="button" class="close" (click)="close()">
+          <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-9">
+                <p>Name: {{ athleteInformation.name }}, {{ athleteInformation.age }}</p>
+                <p>Club: {{ athleteInformation.club }}</p>   
+                <p>Celebrity?
+                    <span *ngIf="athleteInformation.isCelebrity; else notCelebrity">
+                        <i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i>
+                    </span>
+                    <ng-template #notCelebrity>
+                        <i class="fa fa-thumbs-down fa-2x"></i>
+                    </ng-template>
+                </p>
+            </div>
+            <div class="col-3">
+                <img [src]="athleteInformation.avatar"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p>Country: {{athleteInformation.country.name}}</p>
+                <img [src]="athleteInformation.country.icon" />
+            </div>
+            <div class="col-6">
+                <p>Sport: {{athleteInformation.sport.name}}</p>
+                <img [src]="athleteInformation.sport.icon" />
+            </div>
+        </div>     
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="close()">Close</button>
+    </div>
+</div>
