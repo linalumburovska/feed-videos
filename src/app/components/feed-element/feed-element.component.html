@@ -1,1 +1,25 @@
-<p>{{ feedElement.description }}</p>
+<div class="card">
+    <div class="card-header">
+        <h4>{{ feedElement.description }}</h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-3">
+                <h5>Athlete information</h5>
+                <p>Name: {{ feedElement.athlete.name }}</p>
+                <button type="button" class="btn btn-info">More information</button>
+            </div>
+            <div class="col-9">
+                <h6>Video</h6>
+                <iframe
+                    [src]="videoUrl">
+                </iframe> 
+            </div>
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+        <p>Author: {{ feedElement.author.name }}</p>
+        <p>Date: {{ feedElement.createdAt | date: 'short' }}, {{ feedElement.createdBefore }}</p>
+        <p>Sport Group: {{ feedElement.sportGroup.name }}</p>
+    </div>
+</div>
