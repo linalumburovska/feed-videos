@@ -1,3 +1,5 @@
-<button class="btn btn-primary">Test</button>
-<p>layout works!</p>
-<i class="fa fa-american-sign-language-interpreting fa-5x" aria-hidden="true"> </i>
+<div class="container">
+    <div *ngFor="let feedElement of feedData$ | async">
+        <app-feed-element [feedElement]="feedElement"></app-feed-element>
+    </div>
+</div>
