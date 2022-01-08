@@ -1,4 +1,10 @@
 <div class="container">
+
+    <div class="text-center mt-2">
+        <h1>Portal feed</h1>
+        <p>Are you ready to check the best news in the world? You are on the right place ;)</p>
+    </div>
+    
     <div *ngFor="let feedElement of feedData$ | async">
         <app-feed-element [feedElement]="feedElement"></app-feed-element>
     </div>

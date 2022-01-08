@@ -11,11 +11,18 @@
                     More information
                 </button>
             </div>
-            <div class="col-9">
+            <div class="col-4">
                 <h6>Video</h6>
                 <iframe
-                    [src]="videoUrl">
+                    [src]="videoUrl" 
+                    allowfullscreen="true" 
+                    webkitallowfullscreen="true" 
+                    mozallowfullscreen="true">
                 </iframe> 
+            </div>
+            <div class="col-4">
+                <h6>Poster</h6>
+                <img [src]="feedElement.video.poster"/>
             </div>
         </div>
     </div>
