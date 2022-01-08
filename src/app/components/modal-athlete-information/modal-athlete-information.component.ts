@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Athlete } from 'src/app/models/athlete.interface';
 
@@ -10,6 +10,7 @@ import { Athlete } from 'src/app/models/athlete.interface';
 export class ModalAthleteInformationComponent implements OnInit {
 
   @Input() athleteInformation: Athlete;
+  @Output() modalClosed = new EventEmitter<boolean>();
 
   constructor(private modalService: NgbModal) { }
 
@@ -17,6 +18,7 @@ export class ModalAthleteInformationComponent implements OnInit {
   }
 
   close() {
+    this.modalClosed.emit(true);
     this.modalService.dismissAll();
   }
 

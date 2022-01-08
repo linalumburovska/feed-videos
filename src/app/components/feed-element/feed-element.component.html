@@ -7,7 +7,10 @@
             <div class="col-3">
                 <h5>Athlete information</h5>
                 <p>Name: {{ feedElement.athlete.name }}</p>
-                <button type="button" class="btn btn-info" (click)="openModal(moreInfoAthlete)">
+                <button type="button" 
+                        class="btn btn-info" 
+                        (click)="openModal(moreInfoAthlete)"
+                        [@changeBtnColor]=animationState>
                     More information
                 </button>
             </div>
@@ -35,5 +38,8 @@
 </div>
 
 <ng-template #moreInfoAthlete>
-    <app-modal-athlete-information [athleteInformation]="feedElement.athlete"></app-modal-athlete-information>
+    <app-modal-athlete-information 
+        [athleteInformation]="feedElement.athlete"
+        (modalClosed)="animationReturnToNormal($event)"
+        ></app-modal-athlete-information>
 </ng-template>
