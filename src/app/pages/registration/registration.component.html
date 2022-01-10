@@ -1,0 +1,30 @@
+<div class="registration-page">
+
+    <div class="text-center mt-2">
+        <h1>Register to Portal Feed</h1>
+    </div>
+
+    <form [formGroup]="signupForm" (ngSubmit)="registerUser()">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" formControlName="name" placeholder="Enter name">
+        </div>
+
+        <div class="form-group">
+            <label>Email address</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="Enter email">
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" formControlName="password" placeholder="Password">
+        </div>
+
+        <div class="form-group">
+            <label>Avatar</label>
+            <input type="text" class="form-control" formControlName="avatar" placeholder="Enter link avatar">
+        </div>
+
+        <button type="submit" class="btn btn-block btn-registration">Register</button>
+    </form>
+</div>
