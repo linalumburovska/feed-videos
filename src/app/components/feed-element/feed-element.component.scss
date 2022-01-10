@@ -6,7 +6,19 @@ p {
     margin-bottom: 0;
 }
 
-img, iframe {
-    width: 320px;
+img {
+    width: 280px;
     height: 200px;
+    @media screen and (max-width: 350px) {
+        width: 250px;
+    }
+}
+
+iframe {
+    width: 350px;
+    height: 200px;
+
+    @media screen and (max-width: 350px) {
+        width: 250px;
+    }
 }

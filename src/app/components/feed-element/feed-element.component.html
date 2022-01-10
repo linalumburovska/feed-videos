@@ -4,7 +4,7 @@
     </div>
     <div class="card-body">
         <div class="row">
-            <div class="col-3">
+            <div class="col-lg-3 col-md-12">
                 <h5>Athlete information</h5>
                 <p>Name: {{ feedElement.athlete.name }}</p>
                 <button type="button" 
@@ -14,7 +14,7 @@
                     More information
                 </button>
             </div>
-            <div class="col-4">
+            <div class="col-lg-5 col-md-12">
                 <h6>Video</h6>
                 <iframe
                     [src]="videoUrl" 
@@ -23,7 +23,7 @@
                     mozallowfullscreen="true">
                 </iframe> 
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 col-md-12">
                 <h6>Poster</h6>
                 <img [src]="feedElement.video.poster"/>
             </div>
