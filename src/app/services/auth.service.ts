@@ -9,8 +9,6 @@ import { User } from '../models/user.interface';
 
 export class AuthService {
   apiUrl: string = 'https://private-anon-235dd020fd-technicaltaskapi.apiary-mock.com/';
-  headers = new HttpHeaders().set('Content-Type', 'application/json');
-  currentUser = {};
 
   constructor(private http: HttpClient, private router: Router) {}
   
